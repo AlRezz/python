@@ -8,10 +8,10 @@ image_draw = ImageDraw.Draw(text_image)
 image_draw.text((0, 0), text, font=text_font)
 
 for r in range(text_size[1]):
-    lines = []
+    line = ''
     for c in range(text_size[0]):
         if text_image.getpixel((c, r)):
-            lines.append(' ')
+            line += ' '
         else:
-            lines.append('#')
-    print(''.join(lines))
+            line += '#'
+    print(line)
